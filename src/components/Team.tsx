@@ -17,7 +17,7 @@ const Team = () => {
     {
       name: "Mudigonda Naga Bhanuteja Sharma",
       role: "Event Coordinator",
-      rollNo: "22501A4237",
+      rollNo: "22501A4441",
       image: "/lovable-uploads/23cc61c5-dcea-4849-9ca4-8dba1c0c5c58.png",
       description: "Orchestrating hackathons and technical events. Managing event logistics, participant coordination, and ensuring smooth execution of all club activities.",
       icon: Calendar,

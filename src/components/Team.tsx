@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Users2, Crown, Calendar, DollarSign, Settings } from "lucide-react";
 
 const Team = () => {
@@ -8,6 +9,8 @@ const Team = () => {
       name: "Jakkamsetti Madhavan",
       role: "President",
       rollNo: "22501A4218",
+      image: "/lovable-uploads/23cc61c5-dcea-4849-9ca4-8dba1c0c5c58.png",
+      description: "Leading the club with vision and strategic planning. Responsible for overall club direction, partnerships, and ensuring our mission is fulfilled.",
       icon: Crown,
       color: "bg-yellow-500"
     },
@@ -15,6 +18,8 @@ const Team = () => {
       name: "Musugu Dhakshesh Ram Kiran",
       role: "Event Coordinator",
       rollNo: "22501A4237",
+      image: "/lovable-uploads/1b421369-560c-47a0-92ca-4d306a6d0192.png",
+      description: "Orchestrating hackathons and technical events. Managing event logistics, participant coordination, and ensuring smooth execution of all club activities.",
       icon: Calendar,
       color: "bg-blue-500"
     },
@@ -22,6 +27,8 @@ const Team = () => {
       name: "Akshitha Ponna",
       role: "Technical Event Manager",
       rollNo: "22501A4201",
+      image: "/lovable-uploads/c0a76776-4643-4478-bdd9-f53c8500dbb3.png",
+      description: "Overseeing technical aspects of events and workshops. Coordinating with industry experts, managing technical infrastructure, and ensuring quality content delivery.",
       icon: Settings,
       color: "bg-green-500"
     },
@@ -29,6 +36,8 @@ const Team = () => {
       name: "Mudigonda Manogna",
       role: "Finance Budgetter",
       rollNo: "22501A4236",
+      image: "/lovable-uploads/e83f070e-0cb8-48c8-a5d1-253d59622ad3.png",
+      description: "Managing club finances and budget allocation. Securing sponsorships, tracking expenses, and ensuring financial sustainability of all club initiatives.",
       icon: DollarSign,
       color: "bg-purple-500"
     }
@@ -50,25 +59,45 @@ const Team = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {organizers.map((organizer, index) => (
             <Card key={index} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-0 shadow-sm animate-scale-in" style={{ animationDelay: `${index * 0.2}s` }}>
-              <CardContent className="p-8 text-center">
-                <div className={`w-16 h-16 ${organizer.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:animate-glow-pulse`}>
-                  <organizer.icon className="h-8 w-8 text-white" />
+              <CardContent className="p-8">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                  <div className="relative">
+                    <Avatar className="w-24 h-24 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300">
+                      <AvatarImage 
+                        src={organizer.image} 
+                        alt={organizer.name}
+                        className="object-cover"
+                      />
+                      <AvatarFallback className={`${organizer.color} text-white text-xl font-bold`}>
+                        {organizer.name.split(' ').map(n => n[0]).join('')}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className={`absolute -bottom-2 -right-2 w-8 h-8 ${organizer.color} rounded-full flex items-center justify-center shadow-lg group-hover:animate-glow-pulse`}>
+                      <organizer.icon className="h-4 w-4 text-white" />
+                    </div>
+                  </div>
+                  
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-xl font-bold text-foreground mb-2">
+                      {organizer.name}
+                    </h3>
+                    
+                    <Badge variant="outline" className="mb-3 font-medium">
+                      {organizer.role}
+                    </Badge>
+                    
+                    <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+                      {organizer.description}
+                    </p>
+                    
+                    <p className="text-xs text-muted-foreground/70 font-mono">
+                      Roll No: {organizer.rollNo}
+                    </p>
+                  </div>
                 </div>
-                
-                <h3 className="text-lg font-bold text-foreground mb-2">
-                  {organizer.name}
-                </h3>
-                
-                <Badge variant="outline" className="mb-4 font-medium">
-                  {organizer.role}
-                </Badge>
-                
-                <p className="text-sm text-muted-foreground">
-                  Roll No: {organizer.rollNo}
-                </p>
               </CardContent>
             </Card>
           ))}

@@ -15,7 +15,7 @@ const Team = () => {
       color: "bg-yellow-500"
     },
     {
-      name: "Musugu Dhakshesh Ram Kiran",
+      name: "Mudigonda Naga Bhanuteja Sharma",
       role: "Event Coordinator",
       rollNo: "22501A4237",
       image: "/lovable-uploads/23cc61c5-dcea-4849-9ca4-8dba1c0c5c58.png",
@@ -33,9 +33,9 @@ const Team = () => {
       color: "bg-green-500"
     },
     {
-      name: "Mudigonda Manogna",
+      name: "Aaisha Sultana Guduru",
       role: "Finance Budgetter",
-      rollNo: "22501A4236",
+      rollNo: "22501A4401",
       image: "/lovable-uploads/c0a76776-4643-4478-bdd9-f53c8500dbb3.png",
       description: "Managing club finances and budget allocation. Securing sponsorships, tracking expenses, and ensuring financial sustainability of all club initiatives.",
       icon: DollarSign,

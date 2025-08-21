@@ -21,7 +21,11 @@ const Mission = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-card">
+    <section 
+      id="about" 
+      className="py-20" 
+      style={{ backgroundColor: "#e0f7fa" }} // light pastel blue background
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center px-4 py-2 bg-accent rounded-full mb-6">
@@ -39,7 +43,11 @@ const Mission = () => {
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {missionPoints.map((point, index) => (
-            <Card key={index} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-0 shadow-sm animate-scale-in" style={{ animationDelay: `${index * 0.2}s` }}>
+            <Card 
+              key={index} 
+              className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-white/90 border-0 shadow-sm animate-scale-in" 
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:animate-glow-pulse">
                   <point.icon className="h-8 w-8 text-white" />

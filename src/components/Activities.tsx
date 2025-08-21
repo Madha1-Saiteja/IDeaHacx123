@@ -45,7 +45,7 @@ const Activities = () => {
   ];
 
   return (
-    <section id="activities" className="py-20 bg-background">
+    <section id="activities" className="py-20" style={{ backgroundColor: "#e0f7fa" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center px-4 py-2 bg-accent rounded-full mb-6">

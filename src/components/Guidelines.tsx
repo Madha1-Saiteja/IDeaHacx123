@@ -1,83 +1,44 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, DollarSign, Shield, Calendar } from "lucide-react";
+import { DollarSign } from "lucide-react";
 
 const Guidelines = () => {
-  const compliance = [
-    "Minimum of one event per semester will be conducted.",
-    "All activities will be held with prior approval from the HOD.",
-    "The club will actively seek collaborations with other clubs and external tech communities.",
-    "Equal opportunities and active involvement of all club members is ensured.",
-    "Records of meetings, participation, and outcomes will be systematically maintained.",
-    "The club upholds ethics, inclusivity, and professionalism in all its operations."
-  ];
-
   const financialSupport = [
     {
-      item: "Prizes",
-      description: "for hackathon winners."
+      item: "Exciting Prizes",
+      description: "Win amazing prizes for your innovative solutions!"
     },
     {
       item: "Certificates",
-      description: "for all participants."
+      description: "Official recognition for all participants."
     },
     {
-      item: "Materials & Logistics",
-      description: "Tech equipment, snacks, stationery, and event infrastructure."
+      item: "Cash Rewards",
+      description: "Earn cash prizes for winning teams."
     }
   ];
 
   return (
-    <section id="guidelines" className="py-20 bg-background">
+    <section id="guidelines" className="py-20" style={{ backgroundColor: "#e0f7fa" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center px-4 py-2 bg-accent rounded-full mb-6">
-            <Shield className="h-4 w-4 mr-2 text-accent-foreground" />
-            <span className="text-sm font-medium text-accent-foreground">Club Guidelines</span>
+            <DollarSign className="h-4 w-4 mr-2 text-accent-foreground" />
+            <span className="text-sm font-medium text-accent-foreground">Hackathon Rewards</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Guidelines & Support
+            Hackathon Rewards & Prizes
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our operational framework and support requirements for successful club activities.
+            Participate in our hackathons and grab exciting prizes, certificates, and cash rewards! Show your skills and claim your rewards.
           </p>
         </div>
-        
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
-          {/* Compliance Guidelines */}
+
+        <div className="max-w-4xl mx-auto">
           <Card className="group hover:shadow-card transition-all duration-300 animate-scale-in">
             <CardHeader>
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4">
-                  <CheckCircle className="h-6 w-6 text-white" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-foreground">
-                  Compliance with Club Guidelines
-                </CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {compliance.map((guideline, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-muted-foreground leading-relaxed">
-                    {guideline}
-                  </p>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-          
-          {/* Financial Support */}
-          <Card className="group hover:shadow-card transition-all duration-300 animate-scale-in" style={{ animationDelay: '0.2s' }}>
-            <CardHeader>
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
-                  <DollarSign className="h-6 w-6 text-white" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-foreground">
-                  Financial Support Requested
-                </CardTitle>
-              </div>
+              <CardTitle className="text-2xl font-bold text-foreground mb-4">
+                Rewards & Prizes
+              </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               {financialSupport.map((support, index) => (

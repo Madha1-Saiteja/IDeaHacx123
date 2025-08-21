@@ -1,17 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Code, Users, Calendar } from "lucide-react";
-import logo from "../assets/logo.png";
+import { Menu, Users, Calendar } from "lucide-react";
+import logo from "../assets/logo.png"; // Make sure this path is correct
 
 const Header = () => {
   return (
+    // This 'fixed' class is what lifts the header out of the normal page flow
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <img src={logo} alt="Idea Hackathons Club Logo" className="w-14 h-14 mr-4 rounded-lg object-contain" />
+          <div className="flex items-center space-x-2">
+            <img src={logo} alt="Idea Hackathons Club Logo" className="w-14 h-14 mr-4 rounded-lg object-contain cursor-pointer" />
+            <img 
+              src="/pvp.jpeg"  // Direct path from public folder
+              alt="PVPSIT Logo" 
+              className="w-14 h-14 rounded-lg object-contain cursor-pointer" 
+            />
             <div>
               <h1 className="text-2xl font-bold text-foreground">Idea Hackathons Club</h1>
-              <p className="text-sm text-muted-foreground">PVPSIT - CSE(AI&ML)</p>
+              <p className="text-sm text-muted-foreground">PVPSIT - CSE(AI&ML),CSE(Data Science)</p>
             </div>
           </div>
           

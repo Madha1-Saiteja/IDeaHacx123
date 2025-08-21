@@ -7,7 +7,7 @@ const Team = () => {
   const organizers = [
     {
       name: "Jakkamsetti Madhavan",
-      role: "Club Lead",
+      role: "Coordinator",
       rollNo: "22501A4218",
       image: "/lovable-uploads/1b421369-560c-47a0-92ca-4d306a6d0192.png",
       description: "Leading the club with vision and strategic planning. Responsible for overall club direction, partnerships, and ensuring our mission is fulfilled.",
@@ -16,7 +16,7 @@ const Team = () => {
     },
     {
       name: "Mudigonda Naga Bhanuteja Sharma",
-      role: "Technical Lead",
+      role: "Coordinator",
       rollNo: "22501A4441",
       image: "/lovable-uploads/23cc61c5-dcea-4849-9ca4-8dba1c0c5c58.png",
       description: "Orchestrating hackathons and technical events. Managing event logistics, participant coordination, and ensuring smooth execution of all club activities.",
@@ -25,26 +25,26 @@ const Team = () => {
     },
     {
       name: "Akshitha Ponna",
-      role: "community Lead",
+      role: "Coordinator",
       rollNo: "22501A4201",
       image: "/lovable-uploads/e83f070e-0cb8-48c8-a5d1-253d59622ad3.png",
-      description: "Overseeing technical aspects of events and workshops. Coordinating with industry experts, managing technical infrastructure, and ensuring quality content delivery.",
+      description: "Responsible for the technical execution of events and workshops, including developing content, and sourcing knowledgeable speakers for technical sessions.",
       icon: Settings,
       color: "bg-green-500"
     },
     {
       name: "Aaisha Sultana Guduru",
-      role: "Content Lead",
+      role: "Coordinator",
       rollNo: "22501A4401",
       image: "/lovable-uploads/c0a76776-4643-4478-bdd9-f53c8500dbb3.png",
-      description: "Managing club finances and budget allocation. Securing sponsorships, tracking expenses, and ensuring financial sustainability of all club initiatives.",
+      description: "Overseeing club finances and sponsorships while designing all promotional materials. Acting as the main point of contact to drive student engagement.",
       icon: DollarSign,
       color: "bg-purple-500"
     }
   ];
 
   return (
-    <section id="team" className="py-20 bg-gradient-card">
+    <section id="team" className="py-20" style={{ backgroundColor: "#e0f7fa" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center px-4 py-2 bg-accent rounded-full mb-6">

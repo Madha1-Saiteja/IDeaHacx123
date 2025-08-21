@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Code2 } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.png"; // Import the logo
 
 const Hero = () => {
   return (
@@ -25,19 +26,40 @@ const Hero = () => {
               Club
             </span>
           </h1>
+         
           
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            Empowering students with the skills, tools, and opportunities needed to transform innovative ideas into impactful, real-world tech solutions.
+             Organized with Passion by CSM & CSD Students, PVPSIT
+            <br />
+            
+            For Empowering students with the skills, tools, and opportunities needed to transform innovative ideas into impactful, real-world tech solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-            <Button size="lg" className="bg-white text-tech-blue hover:bg-blue-50 shadow-glow">
-              <Code2 className="h-5 w-5 mr-2" />
-              Explore Activities
-              <ArrowRight className="h-5 w-5 ml-2" />
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-tech-blue hover:bg-blue-50 shadow-glow"
+            >
+              <a href="#activities" className="flex items-center gap-2">
+                <Code2 className="h-5 w-5" />
+                <span>Explore Activities</span>
+                <ArrowRight className="h-5 w-5" />
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="text-white border-white/30 hover:bg-white/10">
-              Meet Our Team
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="bg-white text-tech-blue hover:bg-blue-50 shadow-glow"
+            >
+              <a
+                href="https://chat.whatsapp.com/BsyHiC0wgf9FtsbDxlaQY0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Meet Our Team
+              </a>
             </Button>
           </div>
           

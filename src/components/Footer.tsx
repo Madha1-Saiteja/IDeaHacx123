@@ -1,4 +1,5 @@
 import { Code, Mail, MapPin, Phone } from "lucide-react";
+import logo from "../assets/logo.png"; // Adjust the filename if needed
 
 const Footer = () => {
   return (
@@ -8,9 +9,11 @@ const Footer = () => {
           {/* Club Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
-                <Code className="h-6 w-6 text-white" />
-              </div>
+              <img
+                src={logo}
+                alt="Idea Hackathons Club Logo"
+                className="w-16 h-16 rounded-lg bg-white/10 object-contain"
+              />
               <div>
                 <h3 className="text-xl font-bold">Idea Hackathons Club</h3>
                 <p className="text-blue-200 text-sm">Innovate • Create • Transform</p>
@@ -39,17 +42,17 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-blue-300 flex-shrink-0" />
                 <span className="text-blue-100 text-sm">
-                  Department of CSE(AI&ML)<br />
+                  Department of CSE(AI&ML) and CSE(AI&DS)<br />
                   PVPSIT, Kanuru, Vijayawada
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-300 flex-shrink-0" />
-                <span className="text-blue-100 text-sm">ideahackathons@pvpsit.ac.in</span>
+                <span className="text-blue-100 text-sm">22501a4218@pvpsit.ac.in</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-300 flex-shrink-0" />
-                <span className="text-blue-100 text-sm">+91 XXXXX XXXXX</span>
+                <span className="text-blue-100 text-sm">+91 8096785522</span>
               </div>
             </div>
           </div>
@@ -61,7 +64,7 @@ const Footer = () => {
               © 2025 Idea Hackathons Club - PVPSIT. All Rights Reserved.
             </p>
             <div className="flex items-center space-x-4 text-sm text-blue-200">
-              <span>Made with ❤️ by Club Members</span>
+              <span>Designed and Developed By Club Lead</span>
             </div>
           </div>
         </div>

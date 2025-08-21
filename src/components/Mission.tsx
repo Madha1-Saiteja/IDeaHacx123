@@ -31,7 +31,8 @@ const Mission = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Mission & Vision Statement
           </h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"> 
             To empower students with the skills, tools, and opportunities needed to transform innovative ideas into impactful, real-world tech solutions.
           </p>
         </div>

@@ -7,7 +7,7 @@ const Team = () => {
   const organizers = [
     {
       name: "Jakkamsetti Madhavan",
-      role: "President",
+      role: "Club Lead",
       rollNo: "22501A4218",
       image: "/lovable-uploads/1b421369-560c-47a0-92ca-4d306a6d0192.png",
       description: "Leading the club with vision and strategic planning. Responsible for overall club direction, partnerships, and ensuring our mission is fulfilled.",
@@ -16,7 +16,7 @@ const Team = () => {
     },
     {
       name: "Mudigonda Naga Bhanuteja Sharma",
-      role: "Event Coordinator",
+      role: "Technical Lead",
       rollNo: "22501A4441",
       image: "/lovable-uploads/23cc61c5-dcea-4849-9ca4-8dba1c0c5c58.png",
       description: "Orchestrating hackathons and technical events. Managing event logistics, participant coordination, and ensuring smooth execution of all club activities.",
@@ -25,7 +25,7 @@ const Team = () => {
     },
     {
       name: "Akshitha Ponna",
-      role: "Technical Event Manager",
+      role: "community Lead",
       rollNo: "22501A4201",
       image: "/lovable-uploads/e83f070e-0cb8-48c8-a5d1-253d59622ad3.png",
       description: "Overseeing technical aspects of events and workshops. Coordinating with industry experts, managing technical infrastructure, and ensuring quality content delivery.",
@@ -34,7 +34,7 @@ const Team = () => {
     },
     {
       name: "Aaisha Sultana Guduru",
-      role: "Finance Budgetter",
+      role: "Content Lead",
       rollNo: "22501A4401",
       image: "/lovable-uploads/c0a76776-4643-4478-bdd9-f53c8500dbb3.png",
       description: "Managing club finances and budget allocation. Securing sponsorships, tracking expenses, and ensuring financial sustainability of all club initiatives.",
@@ -51,17 +51,24 @@ const Team = () => {
             <Users2 className="h-4 w-4 mr-2 text-accent-foreground" />
             <span className="text-sm font-medium text-accent-foreground">Leadership Team</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Club Organizers
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Meet the passionate leaders driving innovation and organizing impactful events for our tech community.
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {organizers.map((organizer, index) => (
-            <Card key={index} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-0 shadow-sm animate-scale-in" style={{ animationDelay: `${index * 0.2}s` }}>
+            <Card
+              key={index}
+              className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 border-0 shadow-sm animate-scale-in"
+              style={{
+                animationDelay: `${index * 0.2}s`,
+                background: "linear-gradient(135deg, #36dfbaff, #FFF8DC)" // Gradient stays same
+              }}
+            >
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                   <div className="relative">
@@ -81,19 +88,19 @@ const Team = () => {
                   </div>
                   
                   <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-xl font-bold text-foreground mb-2">
+                    <h3 className="text-xl font-extrabold text-gray-900 mb-2 tracking-wide font-serif">
                       {organizer.name}
                     </h3>
                     
-                    <Badge variant="outline" className="mb-3 font-medium">
+                    <Badge variant="outline" className="mb-3 font-medium text-gray-900 border-gray-500/40 bg-white/30">
                       {organizer.role}
                     </Badge>
                     
-                    <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+                    <p className="text-sm text-gray-700 mb-3 leading-relaxed">
                       {organizer.description}
                     </p>
                     
-                    <p className="text-xs text-muted-foreground/70 font-mono">
+                    <p className="text-xs text-gray-600 font-mono">
                       Roll No: {organizer.rollNo}
                     </p>
                   </div>
@@ -105,7 +112,7 @@ const Team = () => {
         
         <div className="text-center mt-16">
           <div className="inline-flex items-center px-6 py-3 bg-primary/10 rounded-full">
-            <span className="text-primary font-medium">Ready to join our mission? Connect with any of our organizers!</span>
+            <span className="text-primary font-medium">Ready to join our mission? Connect with any of our organizers! Click Join Club..</span>
           </div>
         </div>
       </div>

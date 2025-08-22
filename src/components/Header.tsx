@@ -9,7 +9,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <img src={logo} alt="Idea Hackathons Club Logo" className="w-14 h-14 mr-4 rounded-lg object-contain cursor-pointer" />
+           
             <img 
               src="/pvp.jpeg"  // Direct path from public folder
               alt="PVPSIT Logo" 
